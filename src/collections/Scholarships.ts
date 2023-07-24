@@ -1,9 +1,9 @@
 import { CollectionConfig } from 'payload/types';
 
-const Posts: CollectionConfig = {
-  slug: 'posts',
+const Scholarships: CollectionConfig = {
+  slug: 'scholarships',
   admin: {
-    defaultColumns: ['title', 'author', 'category', 'tags', 'status'],
+    defaultColumns: ['title', 'author', 'university', 'tags', 'status'],
     useAsTitle: 'title',
   },
   access: {
@@ -24,9 +24,10 @@ const Posts: CollectionConfig = {
       type: 'date',
     },
     {
-      name: 'category',
+      name: 'university',
       type: 'relationship',
-      relationTo: 'categories'
+      relationTo: 'universities',
+      hasMany: true,
     },
     {
       name: 'tags',
@@ -59,4 +60,4 @@ const Posts: CollectionConfig = {
   ],
 }
 
-export default Posts;
+export default Scholarships;

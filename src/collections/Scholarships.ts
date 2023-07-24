@@ -3,7 +3,7 @@ import { CollectionConfig } from 'payload/types';
 const Scholarships: CollectionConfig = {
   slug: 'scholarships',
   admin: {
-    defaultColumns: ['title', 'author', 'university', 'tags', 'status'],
+    defaultColumns: ['title', 'author', 'category', 'tags', 'status'],
     useAsTitle: 'title',
   },
   access: {
@@ -24,10 +24,9 @@ const Scholarships: CollectionConfig = {
       type: 'date',
     },
     {
-      name: 'university',
+      name: 'category',
       type: 'relationship',
-      relationTo: 'universities',
-      hasMany: true,
+      relationTo: 'universities'
     },
     {
       name: 'tags',

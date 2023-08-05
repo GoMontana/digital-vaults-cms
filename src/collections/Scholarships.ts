@@ -24,7 +24,7 @@ const Scholarships: CollectionConfig = {
       type: 'date',
     },
     {
-      name: 'category',
+      name: 'university',
       type: 'relationship',
       relationTo: 'universities'
     },

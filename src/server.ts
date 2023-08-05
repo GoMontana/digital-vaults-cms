@@ -6,7 +6,8 @@ const app = express();
 
 // Redirect root to Admin panel
 app.get('/', (_, res) => {
-  res.redirect('/admin');
+  res.send('It works');
+  //res.redirect('/admin');
 });
 
 const start = async () => {
@@ -19,9 +20,7 @@ const start = async () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
     },
   })
-
   // Add your own express routes here
-
   app.listen(3000);
 }
 
